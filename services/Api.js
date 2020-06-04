@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const Api = axios.create({
-  baseURL: 'https://elitesolutions.co.ke/debe/api/',
+  baseURL: '',
   //timeout: 2000,
   headers: { 'Content-Type': 'application/json' }
 });
