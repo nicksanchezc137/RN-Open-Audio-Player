@@ -1,7 +1,8 @@
 import axios from 'axios'
+import { BASE_URL } from '../config';
 
 const Api = axios.create({
-  baseURL: 'https://elitesolutions.co.ke/debe/api/',
+  baseURL: BASE_URL,
   //timeout: 2000,
   headers: { 'Content-Type': 'application/json' }
 });
@@ -9,4 +10,4 @@ const Api = axios.create({
   export {
     Api
   
-}
+}; 

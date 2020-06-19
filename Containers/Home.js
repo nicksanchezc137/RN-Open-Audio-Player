@@ -70,25 +70,31 @@ const Home = props => {
       styles.audio_card.height + styles.audio_card.marginBottom;
     return (
       <>
-      <View style={styles.playlist_title}>
-        <Text style={styles.h1}>{"Recently Played"}</Text>
-        <Icon name="arrow-right" color="#fff" size={18} style = {styles.arrow_icon}/> 
-      </View>
-      <FlatList
-        horizontal
-        data={recent_playlist}
-        renderItem={renderRecentItem}
-        initialNumToRender={8}
-        windowSize={10}
-        getItemLayout={(data, index) => ({
-          length: ITEM_HEIGHT,
-          offset: ITEM_HEIGHT * index,
-          index,
-        })}
-        maxToRenderPerBatch={10}
-        keyExtractor={item => item.id}
-      />
-
+        {recent_playlist.length ? (
+          <View style={styles.playlist_title}>
+            <Text style={styles.h1}>{'Recently Played'}</Text>
+            <Icon
+              name="arrow-right"
+              color="#fff"
+              size={18}
+              style={styles.arrow_icon}
+            />
+          </View>
+        ) : null}
+        <FlatList
+          horizontal
+          data={recent_playlist}
+          renderItem={renderRecentItem}
+          initialNumToRender={8}
+          windowSize={10}
+          getItemLayout={(data, index) => ({
+            length: ITEM_HEIGHT,
+            offset: ITEM_HEIGHT * index,
+            index,
+          })}
+          maxToRenderPerBatch={10}
+          keyExtractor={item => item.id}
+        />
       </>
     );
   };
@@ -141,14 +147,14 @@ const Home = props => {
     <>
       <Container>
         <Header navigation={props.navigation} />
-          
+
         <ScrollView
           onScroll={({nativeEvent}) => {
             if (isCloseToBottom(nativeEvent)) {
               setFetching(true);
             }
           }}>
-            {renderRecent()}
+          {renderRecent()}
           <Text style={styles.h1}>Popular Music</Text>
           <View style={{justifyContent: 'center', alignItems: 'center'}}>
             {renderMusic()}
