@@ -8,7 +8,8 @@ To set up a firebase web project refer to this guide [https://firebase.google.co
 Ensure you enable email and password sign in in your firebase project. [https://firebase.google.com/docs/auth/web/password-auth]<br>
 Set up firebase storage to save audio and image files. [https://firebase.google.com/docs/storage/web/start]<br>
 
-##`Set up The APIs`
+## `Set up The APIs`<br>
+[API Repo](https://github.com/nicksanchezc137/Open-Player-API/blob/master/README.md)<br>
 Add the base url to src/config.js
 
 
