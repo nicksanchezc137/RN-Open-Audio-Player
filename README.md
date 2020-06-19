@@ -1,6 +1,6 @@
 A Simple Audio Player Built with React Native.<br>
-You can view the web project [HERE](https://open-audio.ibua.co.ke/).
-[The repo to the web project]()
+You can view the web project [HERE](https://open-audio.ibua.co.ke/).<br>
+[The repo to the web project](https://github.com/nicksanchezc137/Open-Audio-Player)
 
 ![Preview](https://firebasestorage.googleapis.com/v0/b/open-audio-player.appspot.com/o/image%2Fscreenshots.png?alt=media&token=59420442-5398-493d-9c19-2159156ecdd8)
 ## `Set Up Firebase Project`
